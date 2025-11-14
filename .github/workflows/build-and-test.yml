@@ -1,0 +1,17 @@
+name: Build and Test
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: echo "This is a demo 'Install' step."
+
+      - name: Run tests
+        run: echo "This is a demo 'Test' step. Tests passed!"
